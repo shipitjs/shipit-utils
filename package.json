@@ -1,0 +1,15 @@
+{
+  "name": "shipit-utils",
+  "version": "1.0.0",
+  "description": "A collection of Shipit utilities",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "shipit",
+    "deploy"
+  ],
+  "author": "tim@fusionary.com",
+  "license": "MIT"
+}
