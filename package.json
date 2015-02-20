@@ -11,5 +11,10 @@
     "deploy"
   ],
   "author": "tim@fusionary.com",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timkelty/shipit-utils.git"
+  },
+  "readmeFile": "README.md"
 }
