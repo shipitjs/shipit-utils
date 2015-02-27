@@ -16,5 +16,8 @@
     "type": "git",
     "url": "https://github.com/timkelty/shipit-utils.git"
   },
-  "readmeFile": "README.md"
+  "readmeFile": "README.md",
+  "dependencies": {
+    "lodash": "^3.3.1"
+  }
 }
