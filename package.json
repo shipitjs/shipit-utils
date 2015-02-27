@@ -1,6 +1,6 @@
 {
   "name": "shipit-utils",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A collection of Shipit utilities",
   "main": "index.js",
   "scripts": {
