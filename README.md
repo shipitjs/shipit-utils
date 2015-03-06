@@ -1,1 +1,65 @@
 # shipit-utils
+
+## Install
+
+```
+npm install --save shipit-utils
+```
+
+## Usage
+
+```
+var utils = require('shipit-utils');
+```
+
+## Methods
+
+### utils.getShipit(gruntOrShipit)
+
+Returns the Shipit object, regardless of your context (Grunt or Shipit).
+
+```
+var shipit = utils.getShipit(gruntOrShipit);
+```
+
+### utils.registerTask(gruntOrShipit, name, task, [async])
+Register a task, regardless of your context (Grunt or Shipit).
+
+#### Params
+
+##### task `Fn`|`Array<String>`
+Task function or array of task names to run in order. *Note: If in a Grunt context and passing an array of task names, task will always be synchronous/blocking.*
+
+##### async `Boolean`
+Register task as async or blocking. Default: `true`.
+
+#### Examples
+
+```
+var task = function() {
+    return shipit.local('sleep 10s');
+};
+
+// Async task
+utils.registerTask(gruntOrShipit, task);
+
+// Blocking task
+utils.registerTask(gruntOrShipit, 'myTask', task, false);
+
+// Run a series of tasks in order
+utils.registerTask(gruntOrShipit, 'myTask', ['some', 'other', 'tasks']);
+```
+
+### utils.runTask(gruntOrShipit, task)
+Run a task or array of tasks, regardless of your context (Grunt or Shipit).
+
+#### Params
+
+##### task `String`|`Array<String>`
+
+### utils.equalValues(values)
+Test to see if all the values in an array are equal. Useful for determining if multiple remote servers are out of sync.
+
+#### Params
+
+##### values `Array`
