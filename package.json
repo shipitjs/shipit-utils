@@ -1,23 +1,19 @@
 {
-  "name": "shipit-utils",
-  "version": "1.1.1",
-  "description": "A collection of Shipit utilities to ease development of plugins.",
-  "main": "index.js",
-  "scripts": {
-    "test": ""
-  },
-  "keywords": [
-    "shipit",
-    "deploy"
-  ],
-  "author": "tim@fusionary.com",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/timkelty/shipit-utils.git"
-  },
-  "readmeFile": "README.md",
+  "name": "index",
+  "private": true,
+  "version": "0.0.0",
   "dependencies": {
-    "lodash": "^3.3.1"
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0",
+    "shipit-cli": "^1.0.0",
+    "sinon": "^1.12.2",
+    "sinon-as-promised": "^2.0.3",
+    "sinon-chai": "^2.6.0"
+  },
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
   }
 }
