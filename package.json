@@ -1,6 +1,6 @@
 {
   "name": "shipit-utils",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "dependencies": {
     "chai": "^1.10.0",
     "mocha": "^2.1.0",
