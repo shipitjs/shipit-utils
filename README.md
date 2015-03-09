@@ -8,7 +8,7 @@ npm install --save shipit-utils
 
 ## Usage
 
-```
+```js
 var utils = require('shipit-utils');
 ```
 
@@ -18,7 +18,7 @@ var utils = require('shipit-utils');
 
 Returns the Shipit object, regardless of your context (Grunt or Shipit).
 
-```
+```js
 var shipit = utils.getShipit(gruntOrShipit);
 ```
 
@@ -33,7 +33,7 @@ Register task as async or blocking. Default: `true`.
 
 #### Examples
 
-```
+```js
 var task = function() {
     return shipit.local('sleep 10s');
 };
@@ -57,3 +57,7 @@ Run a task or array of tasks, regardless of your context (Grunt or Shipit).
 Test to see if all the values in an array are equal. Useful for determining if multiple remote servers are out of sync.
 
 ##### values `Array`
+
+## License
+
+MIT
