@@ -1,7 +1,6 @@
 {
-  "name": "index",
-  "private": true,
-  "version": "0.0.0",
+  "name": "shipit-utils",
+  "version": "1.1.1",
   "dependencies": {
     "chai": "^1.10.0",
     "mocha": "^2.1.0",
