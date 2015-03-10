@@ -29,7 +29,7 @@ Register a task, regardless of your context (Grunt or Shipit).
 Task function or array of task names to run in order. *Note: If in a Grunt context and passing an array of task names, task will always be synchronous/blocking.*
 
 ##### async `Boolean`
-Register task as async or blocking. Default: `true`.
+Register task as async or blocking. Default: `false`.
 
 #### Examples
 
