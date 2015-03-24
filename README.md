@@ -22,14 +22,11 @@ Returns the Shipit object, regardless of your context (Grunt or Shipit).
 var shipit = utils.getShipit(gruntOrShipit);
 ```
 
-### utils.registerTask(gruntOrShipit, name, task, [async])
+### utils.registerTask(gruntOrShipit, name, task)
 Register a task, regardless of your context (Grunt or Shipit).
 
 ##### task `Fn`|`Array<String>`
 Task function or array of task names to run in order. *Note: If in a Grunt context and passing an array of task names, task will always be synchronous/blocking.*
-
-##### async `Boolean`
-Register task as async or blocking. Default: `false`.
 
 #### Examples
 
