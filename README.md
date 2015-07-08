@@ -35,11 +35,8 @@ var task = function() {
     return shipit.local('sleep 10s');
 };
 
-// Async task
-utils.registerTask(gruntOrShipit, task);
-
-// Blocking task
-utils.registerTask(gruntOrShipit, 'myTask', task, false);
+// Register a (blocking) task
+utils.registerTask(gruntOrShipit, 'myTask', task);
 
 // Run a series of tasks in order
 utils.registerTask(gruntOrShipit, 'myTask', ['some', 'other', 'tasks']);
