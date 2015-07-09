@@ -8,7 +8,8 @@ var path = require('path');
 var grunt = require('grunt');
 
 describe('utils', function () {
-  var shipit, task;
+  var shipit, task, task2;
+  var completedTasks = [];
   beforeEach(function () {
     shipit = new Shipit({
       environment: 'test',
@@ -25,7 +26,14 @@ describe('utils', function () {
 
     grunt.shipit = shipit;
     task = function() {
-      return shipit.local('sleep 2s && echo test');
+      return shipit.local('echo task').then(function() {
+        completedTasks.push('task');
+      });
+    };
+    task2 = function() {
+      return shipit.local('echo task2').then(function() {
+        completedTasks.push('task2');
+      });
     };
   });
 
@@ -48,6 +56,16 @@ describe('utils', function () {
       utils.registerTask(shipit, 'test', task);
       expect(shipit.hasTask('test')).to.equal(true);
       done();
+    });
+
+    it('should register a task with a callback', function (done) {
+      completedTasks = [];
+      utils.registerTask(shipit, 'test', task);
+      utils.registerTask(shipit, 'callbackTest', ['test'], task2);
+      shipit.start('callbackTest', function() {
+        expect(completedTasks).to.include.members(['task', 'task2']);
+        done();
+      });
     });
   });
 
