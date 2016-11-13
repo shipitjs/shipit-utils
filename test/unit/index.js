@@ -49,6 +49,18 @@ describe('utils', function() {
       expect(shipit.hasTask('test')).to.equal(true);
       done();
     });
+
+    it('should optionally register a Grunt task with desc.', function(done) {
+      utils.registerTask(grunt, 'test', 'something testy!', task);
+      expect(grunt.task.exists('test')).to.equal(true);
+      done();
+    });
+
+    it('should still register a Shipit task if there is a desc.', function(done) {
+      utils.registerTask(shipit, 'test', 'something testy!', task);
+      expect(shipit.hasTask('test')).to.equal(true);
+      done();
+    });
   });
 
   describe('#equalValues', function() {
