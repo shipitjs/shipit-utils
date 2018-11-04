@@ -2,7 +2,7 @@
   "name": "shipit-utils",
   "version": "1.4.0",
   "dependencies": {
-    "lodash": "^3.5.0"
+    "lodash": "^4.17.11"
   },
   "scripts": {
     "test": "mocha --recursive"
